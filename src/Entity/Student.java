@@ -104,7 +104,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(String studentName, String dateOfBirth, String homeTown, int academicYear, int studentId, float CPA, String mayjor, String mail, String phoneNumber, boolean studentStatus) {
+    public Student(String studentName, String dateOfBirth, String homeTown, int academicYear, int studentId, float CPA, String mayjor, String mail, String phoneNumber) {
         this.studentName = studentName;
         this.dateOfBirth = dateOfBirth;
         this.homeTown = homeTown;
@@ -114,8 +114,8 @@ public class Student {
         this.mayjor = mayjor;
         this.mail = mail;
         this.phoneNumber = phoneNumber;
-        this.studentStatus = studentStatus;
     }
-    
+    // Upda1: xoa thuoc tinh status khi khoi tao
+    // allow null status trong db: ALTER TABLE Students.dbo.Students_Table ALTER COLUMN Status bit NULL;
     
 }

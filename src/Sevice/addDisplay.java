@@ -5,6 +5,17 @@
  */
 package Sevice;
 
+import Entity.Student;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  *
  * @author Dell
@@ -16,6 +27,9 @@ public class addDisplay extends javax.swing.JFrame {
      */
     public addDisplay() {
         initComponents();
+        this.setResizable(false);
+        this.setName("Them sinh vien");
+        this.setVisible(true);
     }
 
     /**
@@ -27,21 +41,265 @@ public class addDisplay extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jtfName = new javax.swing.JTextField();
+        jtfDateOfBirth = new javax.swing.JTextField();
+        jtfHomeTown = new javax.swing.JTextField();
+        jtfAcademicYear = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jtfCPA = new javax.swing.JTextField();
+        jtfMayjor = new javax.swing.JTextField();
+        jtfPhoneNumber = new javax.swing.JTextField();
+        jbtnAddStudent = new javax.swing.JButton();
+        jlbCondition1 = new javax.swing.JLabel();
+        jlbCondition4 = new javax.swing.JLabel();
+        jlbCondition2 = new javax.swing.JLabel();
+        jlbCondition7 = new javax.swing.JLabel();
+        jlbCondition3 = new javax.swing.JLabel();
+        jlbCondition6 = new javax.swing.JLabel();
+        jlbCondition5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jtfStudentID = new javax.swing.JTextField();
+        jlbCondition8 = new javax.swing.JLabel();
+        jlbNotification = new javax.swing.JLabel();
+        jbtReturnMainMenu = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Nhap thong tin sinh vien");
+
+        jLabel2.setText("Date of birth");
+
+        jLabel3.setText("Home town");
+
+        jLabel4.setText("Name");
+
+        jLabel5.setText("Academic year");
+
+        jLabel8.setText("CPA");
+
+        jLabel9.setText("Mayjor");
+
+        jtfName.setText("Tran Van A");
+        jtfName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNameActionPerformed(evt);
+            }
+        });
+
+        jtfDateOfBirth.setText("01/01/2000");
+
+        jtfHomeTown.setText("Ha Noi");
+
+        jtfAcademicYear.setText("63");
+
+        jLabel11.setText("Phone number");
+
+        jtfCPA.setText("3.1");
+
+        jtfMayjor.setText("SET");
+
+        jtfPhoneNumber.setText("0123345345");
+
+        jbtnAddStudent.setText("Them sinh vien");
+        jbtnAddStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnAddStudentActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Student ID");
+
+        jtfStudentID.setText("20186300");
+
+        jbtReturnMainMenu.setText("Quay lai man hinh chinh");
+        jbtReturnMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtReturnMainMenuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfName)
+                            .addComponent(jtfDateOfBirth)
+                            .addComponent(jtfHomeTown)
+                            .addComponent(jtfAcademicYear)
+                            .addComponent(jtfCPA)
+                            .addComponent(jtfMayjor)
+                            .addComponent(jtfPhoneNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+                            .addComponent(jtfStudentID)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jbtnAddStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlbNotification, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jlbCondition1, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                    .addComponent(jlbCondition4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlbCondition2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlbCondition7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlbCondition3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlbCondition6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlbCondition5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlbCondition8, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtReturnMainMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbtnAddStudent))
+                    .addComponent(jlbNotification, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtReturnMainMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jlbCondition1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfName)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jlbCondition4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfDateOfBirth, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jlbCondition2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfHomeTown)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jlbCondition7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfAcademicYear, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jlbCondition3, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                            .addComponent(jtfMayjor))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbCondition6, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfCPA, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbCondition5, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfStudentID)
+                            .addComponent(jlbCondition8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public static String showInfor = null;
+    
+    private void jbtnAddStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddStudentActionPerformed
+        // TODO add your handling code here:
+        
+        // Lấy dữ liệu từ text
+        String studentName = jtfName.getText();
+        String dateOfBirth = jtfDateOfBirth.getText();
+        String homeTown = jtfHomeTown.getText();
+        int academicYear = Integer.valueOf(jtfAcademicYear.getText());
+        String phoneNumber = jtfPhoneNumber.getText();
+        float cpa = Float.valueOf(jtfCPA.getText());
+        String mayjor = jtfMayjor.getText();
+        int studentID = Integer.valueOf(jtfStudentID.getText());
+        
+        // Gọi các hàm kiểm tra và thông báo tính hợp lệ
+        boolean condition1 = checkNameHomeTownMayjor(studentName);
+        boolean condition2 = checkNameHomeTownMayjor(homeTown);
+        boolean condition3 = checkNameHomeTownMayjor(mayjor);
+        boolean condition4 = checkDateOfBirth(dateOfBirth);
+        boolean condition5 = checkCPA(cpa);
+        boolean condition6 = checkPhoneNumber(phoneNumber);
+        boolean condition7 = checkAcademicYear(academicYear);
+        boolean condition8 = checkStudentID(studentID);
+        
+        // Nếu không thỏa mãn: tạo thông báo nhập lai
+        if(condition1 == false) jlbCondition1.setText("Ten khong hop le, moi nhap lai!");
+        else jlbCondition1.setText("");
+        if(condition2 == false) jlbCondition2.setText("Que quan khong hop le, moi nhap lai!");
+        else jlbCondition2.setText("");
+        if(condition3 == false) jlbCondition3.setText("Chuyen nganh khong phu hop, moi nhap lai!");
+        else jlbCondition3.setText("");
+        if(condition4 == false) jlbCondition4.setText("Ngay sinh khong hop le, moi nhap lai!");
+        else jlbCondition4.setText("");
+        if(condition5 == false) jlbCondition5.setText("Diem CPA khong hop le, moi nhap lai!");
+        else jlbCondition5.setText("");
+        if(condition6 == false) jlbCondition6.setText("So dien thoai khong hop le, moi nhap lai!");
+        else jlbCondition6.setText("");
+        if(condition7 == false) jlbCondition7.setText("Nien khoa khong phu hop, moi nhap lai!");
+        else jlbCondition7.setText("");
+        if(condition8 == false) jlbCondition8.setText("Ma so sinh vien khong hop le, moi nhap lai!");
+        else jlbCondition8.setText("");
+        
+        // Nếu thỏa mãn: tạo mail + ID cho sinh viên
+        //insert vào trong database
+        if(condition1 && condition2 && condition3 && condition4 && condition5
+                && condition6 && condition7 && condition8 == true){
+            String mail = studentName + studentID + "@sis.hust.edu.vn";
+            Student insertStudent = new Student(studentName, dateOfBirth, homeTown, academicYear, studentID, cpa, mayjor, mail, phoneNumber);
+            insertData(insertStudent);
+            jlbNotification.setText("Them sinh vien thanh cong!!!!!");
+        }
+        
+        //hiển thị tạo mới thành công và hiển thị thông tin sinh viên
+    }//GEN-LAST:event_jbtnAddStudentActionPerformed
+
+    private void jtfNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNameActionPerformed
+
+    private void jbtReturnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtReturnMainMenuActionPerformed
+        // TODO add your handling code here:
+        MenuDisplay menu = new MenuDisplay();
+    }//GEN-LAST:event_jbtReturnMainMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +337,134 @@ public class addDisplay extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton jbtReturnMainMenu;
+    private javax.swing.JButton jbtnAddStudent;
+    private javax.swing.JLabel jlbCondition1;
+    private javax.swing.JLabel jlbCondition2;
+    private javax.swing.JLabel jlbCondition3;
+    private javax.swing.JLabel jlbCondition4;
+    private javax.swing.JLabel jlbCondition5;
+    private javax.swing.JLabel jlbCondition6;
+    private javax.swing.JLabel jlbCondition7;
+    private javax.swing.JLabel jlbCondition8;
+    private javax.swing.JLabel jlbNotification;
+    private javax.swing.JTextField jtfAcademicYear;
+    private javax.swing.JTextField jtfCPA;
+    private javax.swing.JTextField jtfDateOfBirth;
+    private javax.swing.JTextField jtfHomeTown;
+    private javax.swing.JTextField jtfMayjor;
+    private javax.swing.JTextField jtfName;
+    private javax.swing.JTextField jtfPhoneNumber;
+    private javax.swing.JTextField jtfStudentID;
     // End of variables declaration//GEN-END:variables
+    
+    //All check function using regrex
+    //Check name + home town + mayjor
+    private boolean checkNameHomeTownMayjor(String input){
+        //Using regrex to check name
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$");
+        Matcher matcher = pattern.matcher(input);
+        boolean result = matcher.find();
+        return result;
+    }
+    
+    //Check date of birth
+    private boolean checkDateOfBirth(String dateOfBirth){
+        Pattern pattern = Pattern.compile("(^(((0[1-9]|1[0-9]|2[0-8])"
+                + "[\\/](0[1-9]|1[012]))|((29|30|31)[\\/](0[13578]|1[02]))|((29|30)"
+                + "[\\/](0[4,6,9]|11)))[\\/](19|[2-9][0-9])\\d\\d$)|(^29[\\/]02[\\/](19|[2-9][0-9])"
+                + "(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)");
+        Matcher matcher = pattern.matcher(dateOfBirth);
+        boolean result = matcher.find();
+        return result;
+    }
+    
+    //check academic year
+    private boolean checkAcademicYear(int academicYear){
+        String academicYearString = String.valueOf(academicYear);
+        Pattern pattern = Pattern.compile("^[1-9][0-9]?$|^100$&&");
+        Matcher matcher = pattern.matcher(academicYearString);
+        boolean result = matcher.find();
+        return result;
+    }
+    
+    //check phone number
+    private boolean checkPhoneNumber(String phoneNumber){
+        Pattern pattern = Pattern.compile("^[0-9\\-\\+]{9,15}$");
+        Matcher matcher = pattern.matcher(phoneNumber);
+        boolean result = matcher.find();
+        return result;
+    }
+    
+    //check cpa
+    private boolean checkCPA(float cpa){
+        if(cpa > 4.0 || cpa < 0.0) return false;
+        return true;
+    }
+    
+    //check Student ID
+    private boolean checkStudentID(int studentID){
+        Statement statement = null;
+        try{
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  // load the driver
+        Connection connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=Students;user=sa;password=123123;");
+        statement = connection.createStatement();
+        String sql = "select * from Students.dbo.Students_Table;";
+        ResultSet resultSet = statement.executeQuery(sql);
+        while(resultSet.next()){
+            if(studentID == resultSet.getInt(5)) return false;
+            }
+        }
+        catch(SQLException sqle) {}
+        catch(ClassNotFoundException e) {}
+        return true;
+    }
+    
+    //insert data to dataBase
+    public static void insertData(Student insertStudent){
+        Statement statement = null;
+        try{
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  // load the driver
+        Connection connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=Students;user=sa;password=123123;");
+ 
+        //System.out.println("Connected to database !");
+     
+        statement = connection.createStatement();
+        String sql = "insert into Students.dbo.Students_Table (Name, DateOFBirth, HomeTown, AcademicYear, ID, CPA, Mayjor, Mail, PhoneNumber) values ('"+
+                 insertStudent.getStudentName() + "','" 
+                + insertStudent.getDateOfBirth() +"','" 
+                + insertStudent.getHomeTown() + "'," 
+                + insertStudent.getAcademicYear() + "," 
+                + insertStudent.getStudentId() + "," 
+                + insertStudent.getCPA() + ",'" 
+                + insertStudent.getMayjor() + "','" 
+                + insertStudent.getMail() + "','" 
+                + insertStudent.getPhoneNumber() + "');";
+        statement.execute(sql);
+        }
+        catch(SQLException sqle) {
+        //System.out.println("Sql Exception :"+sqle.getMessage());
+        }
+        catch(ClassNotFoundException e) {
+        //System.out.println("Class Not Found Exception :" + e.getMessage());
+        }
+    }
+    
+    
+    //This project can be develop
+    //Develop 1: Upgrade regrex in every check function
+    
+
+    //Problems
+    //Problem 1: AE trong team chưa nhat thiet ke du an
+    //
 }

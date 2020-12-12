@@ -23,13 +23,258 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel4" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jLabel1" alignment="1" pref="253" max="32767" attributes="0"/>
+                              <Component id="jLabel3" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jLabel2" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jLabel5" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel11" alignment="0" min="-2" pref="253" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jLabel8" alignment="0" min="-2" pref="253" max="-2" attributes="0"/>
+                  <Component id="jLabel6" alignment="0" min="-2" pref="253" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jtfName" max="32767" attributes="0"/>
+                          <Component id="jtfDateOfBirth" max="32767" attributes="0"/>
+                          <Component id="jtfHomeTown" max="32767" attributes="0"/>
+                          <Component id="jtfAcademicYear" max="32767" attributes="0"/>
+                          <Component id="jtfCPA" max="32767" attributes="0"/>
+                          <Component id="jtfMayjor" max="32767" attributes="0"/>
+                          <Component id="jtfPhoneNumber" pref="399" max="32767" attributes="0"/>
+                          <Component id="jtfStudentID" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="jbtnAddStudent" min="-2" pref="248" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jlbNotification" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jlbCondition1" pref="202" max="32767" attributes="0"/>
+                  <Component id="jlbCondition4" max="32767" attributes="0"/>
+                  <Component id="jlbCondition2" max="32767" attributes="0"/>
+                  <Component id="jlbCondition7" max="32767" attributes="0"/>
+                  <Component id="jlbCondition3" max="32767" attributes="0"/>
+                  <Component id="jlbCondition6" max="32767" attributes="0"/>
+                  <Component id="jlbCondition5" max="32767" attributes="0"/>
+                  <Component id="jlbCondition8" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
+                  <Component id="jbtReturnMainMenu" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel1" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="jbtnAddStudent" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jlbNotification" max="32767" attributes="0"/>
+                  <Component id="jbtReturnMainMenu" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jlbCondition1" max="32767" attributes="0"/>
+                  <Component id="jtfName" max="32767" attributes="0"/>
+                  <Component id="jLabel4" pref="58" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jlbCondition4" max="32767" attributes="0"/>
+                  <Component id="jtfDateOfBirth" pref="58" max="32767" attributes="0"/>
+                  <Component id="jLabel2" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jlbCondition2" max="32767" attributes="0"/>
+                  <Component id="jtfHomeTown" max="32767" attributes="0"/>
+                  <Component id="jLabel3" pref="58" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jlbCondition7" max="32767" attributes="0"/>
+                  <Component id="jtfAcademicYear" pref="58" max="32767" attributes="0"/>
+                  <Component id="jLabel5" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jlbCondition3" pref="58" max="32767" attributes="0"/>
+                          <Component id="jtfMayjor" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jtfPhoneNumber" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="jlbCondition6" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jtfCPA" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="jlbCondition5" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jtfStudentID" max="32767" attributes="0"/>
+                          <Component id="jlbCondition8" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabel9" min="-2" pref="58" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel11" min="-2" pref="58" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel8" min="-2" pref="58" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel6" pref="70" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nhap thong tin sinh vien"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Date of birth"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Home town"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Academic year"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CPA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mayjor"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfName">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tran Van A"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfNameActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfDateOfBirth">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="01/01/2000"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfHomeTown">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ha Noi"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfAcademicYear">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="63"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Phone number"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfCPA">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="3.1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfMayjor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SET"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfPhoneNumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0123345345"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbtnAddStudent">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Them sinh vien"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnAddStudentActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbCondition1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbCondition4">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbCondition2">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbCondition7">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbCondition3">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbCondition6">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbCondition5">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Student ID"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfStudentID">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="20186300"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbCondition8">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbNotification">
+    </Component>
+    <Component class="javax.swing.JButton" name="jbtReturnMainMenu">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Quay lai man hinh chinh"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtReturnMainMenuActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
 </Form>
